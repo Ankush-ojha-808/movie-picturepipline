@@ -406,6 +406,13 @@ kustomize edit set image backend=<ECR_REPO_URL>:<NEW_TAG_HERE>
 # Apply the manifests to the cluster
 kustomize build | kubectl apply -f -
 ```
+## Frontend Proof
+![Frontend showing movie list](paste-the-url-here)
+<img width="757" height="411" alt="Screenshot 2026-09-08 002030" src="https://github.com/user-attachments/assets/1117cbb2-229d-4db7-ae52-c65f8bfc86e9" />
+
+## Backend Proof
+![Backend returning movies JSON](paste-karo-ye-naya-url-yahan)
+<img width="378" height="96" alt="image" src="https://github.com/user-attachments/assets/238d9f62-8d6b-4395-ae78-1c4529b35d00" />
 
 ## License
 
