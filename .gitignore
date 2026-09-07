@@ -1,0 +1,3 @@
+.terraform/
+*.tfstate/ >> .gitignore
+echo *.tfstate.backup/
