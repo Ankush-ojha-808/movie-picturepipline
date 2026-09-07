@@ -1,7 +1,13 @@
 from . import app
 import os
 
-
+git clone https://github.com/tfutils/tfenv.git ~/.tfenv
+export PATH="$HOME/.tfenv/bin:$PATH"
+source ~/.bashrc
+tfenv install 1.3.9
+tfenv use 1.3.9
+cd /workspace/setup/terraform
+terraform init
 def test_movies_endpoint_returns_200():
     with app.test_client() as client:
         status_code = os.getenv("FAIL_TEST", 200)
