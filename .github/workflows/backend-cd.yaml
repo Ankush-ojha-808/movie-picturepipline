@@ -9,7 +9,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: mp-backend       # <-- change to your actual ECR repo name
+  ECR_REPOSITORY: backend       # <-- change to your actual ECR repo name
   EKS_CLUSTER_NAME: cluster        # <-- change if you used a different cluster name
 
 defaults:
