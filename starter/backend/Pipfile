@@ -9,6 +9,7 @@ uwsgi = "*"
 flask-cors = "*"
 pytest = "*"
 verbose = "*"
+six = "*"
 
 [dev-packages]
 black = "*"
