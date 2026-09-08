@@ -406,13 +406,42 @@ kustomize edit set image backend=<ECR_REPO_URL>:<NEW_TAG_HERE>
 # Apply the manifests to the cluster
 kustomize build | kubectl apply -f -
 ```
-## Frontend Proof
-![Frontend showing movie list](paste-the-url-here)
-<img width="757" height="411" alt="Screenshot 2026-09-08 002030" src="https://github.com/user-attachments/assets/1117cbb2-229d-4db7-ae52-c65f8bfc86e9" />
+## Deployment Verification
 
-## Backend Proof
-![Backend returning movies JSON](paste-karo-ye-naya-url-yahan)
-<img width="378" height="96" alt="image" src="https://github.com/user-attachments/assets/238d9f62-8d6b-4395-ae78-1c4529b35d00" />
+### Live URLs
+- Frontend: http://a448add675ed54ede9347804e959b9b0-1226788215.us-east-1.elb.amazonaws.com
+- Backend: http://ac0a7792c096f4bc28290a6fe90b60f2-1332337741.us-east-1.elb.amazonaws.com/movies
+
+### Frontend Proof
+
+**Frontend Application (Browser with URL visible)**
+<img width="757" height="417" alt="Frontend browser" src="https://github.com/user-attachments/assets/59b1e4c9-2875-48d2-bc9e-31e656c44747" />
+
+**kubectl get all**
+<img width="722" height="313" alt="kubectl get all" src="https://github.com/user-attachments/assets/a6d6039a-26d4-4fef-8074-229d500a7ab8" />
+
+**kubectl describe deploy frontend**
+<img width="793" height="427" alt="kubectl describe deploy frontend" src="https://github.com/user-attachments/assets/9ab236fe-5e5d-478f-b21c-f11f814d71fb" />
+
+**kubectl get svc frontend**
+<img width="717" height="46" alt="kubectl get svc frontend" src="https://github.com/user-attachments/assets/c7d6ae2e-9811-47ee-a7cc-48a2323c991c" />
+
+**ECR Frontend Images**
+<img width="1532" height="733" alt="ECR frontend images" src="https://github.com/user-attachments/assets/4cbebc04-1f98-484b-9f36-e737e4e379f0" />
+
+### Backend Proof
+
+**Backend API (Browser with URL visible)**
+<img width="762" height="348" alt="Backend browser" src="https://github.com/user-attachments/assets/44526f19-e653-474d-8ee5-8143794f57f0" />
+
+**kubectl describe deploy backend**
+<img width="765" height="432" alt="kubectl describe deploy backend" src="https://github.com/user-attachments/assets/86c17155-01f3-4db8-8582-c6566538d795" />
+
+**kubectl get svc backend**
+<img width="713" height="46" alt="kubectl get svc backend" src="https://github.com/user-attachments/assets/8b9cff30-ce2f-44f2-8516-9cbb85ea6655" />
+
+**ECR Backend Images**
+<img width="1532" height="737" alt="ECR backend images" src="https://github.com/user-attachments/assets/28a92bda-0d40-43ec-be36-81e7541f2141" />
 
 ## License
 
